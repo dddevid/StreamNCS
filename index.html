@@ -3,32 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twitch Audio Stream</title>
+    <title>NCS 24/7 Live Radio - Audio Stream</title>
     <style>
-        /* Nascondi completamente il player Twitch (senza che si veda nulla) */
-        #twitch-embed {
-            display: none;
+        /* Ensure the page takes up the full viewport and has no margins or padding */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Optional: change the background to black or any color */
+        }
+
+        /* Hide the iframe (video player) but keep it active for audio */
+        iframe {
+            display: none; /* This hides the iframe */
+            width: 0;
+            height: 0;
         }
     </style>
 </head>
 <body>
 
-    <!-- Placeholder per l'embed di Twitch -->
-    <div id="twitch-embed"></div>
-
-    <!-- Carica lo script dell'embed di Twitch -->
-    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
-
-    <!-- Crea l'oggetto Twitch.Player. Questo renderizzerà il player all'interno del div -->
-    <script type="text/javascript">
-      new Twitch.Player("twitch-embed", {
-        channel: "nocopyrightsounds",  // Canale Twitch
-        muted: false,                  // L'audio non è disabilitato
-        autoplay: true,                // Autoplay attivato per riprodurre l'audio subito
-        width: 0,                      // Imposta la larghezza del player a 0 per nasconderlo
-        height: 0,                     // Imposta l'altezza del player a 0 per nasconderlo
-      });
-    </script>
+    <!-- Invisible iframe for the YouTube audio stream -->
+    <iframe src="https://www.youtube.com/embed/oWW5TLrrbNo?vq=hd1080&autoplay=1&fs=0&color=white&controls=0&disablekb=1" 
+            title="📻 NCS 24/7 Live Radio 🔴 - 1500+ Copyright Free Songs (Dance, EDM, Trap, House) 🎵">
+    </iframe>
 
 </body>
 </html>
