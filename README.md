@@ -1,9 +1,8 @@
 # StreamNCS
-
-This project allows you to play only the audio from the **nocopyrightsounds** Twitch channel on a webpage. The video player is hidden, but the audio still plays, making it ideal for those who want to listen to music or audio streams without showing the video.
+This project allows you to play only the audio from the **nocopyrightsounds** Twitch channel or YouTube stream on a webpage. The video player is hidden, but the audio still plays, making it ideal for those who want to listen to music or audio streams without showing the video.
 
 ## Features
-- Plays audio from the **nocopyrightsounds** Twitch channel automatically.
+- Plays audio from the **nocopyrightsounds** YouTube channel automatically.
 - The video player is hidden, so the page doesn't load or display the video.
 - Ideal for OBS users who want to add just the audio stream.
 
@@ -13,6 +12,7 @@ This project allows you to play only the audio from the **nocopyrightsounds** Tw
 2. Save the `index.html` file in your project folder.
 3. Open the `index.html` file in a browser to listen to the audio.
 4. To add the audio to OBS, drag the button below into your OBS window to automatically create a new audio source.
+
 
 ## Add Audio to OBS
 
