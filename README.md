@@ -19,7 +19,7 @@ This project allows you to play only the audio from the **nocopyrightsounds** Tw
 Drag the button below directly into OBS to create an audio source that plays **nocopyrightsounds** audio 24/7.
 
 <!-- Button styled as a link -->
-<a href="https://https://dddevid.github.io/StreamNCS?layer-name=SoundNCS&layer-width=800&layer-height=600" target="_blank" style="display: inline-block; padding: 12px 24px; font-size: 16px; font-weight: bold; color: #fff; background-color: #9146ff; border-radius: 8px; text-decoration: none; transition: background-color 0.3s ease, transform 0.2s ease;">Add Audio to OBS</a>
+<a href="https://https://dddevid.github.io/StreamNCS?layer-name=SoundNCS%20By%20ddevid&layer-width=800&layer-height=600" target="_blank" style="display: inline-block; padding: 12px 24px; font-size: 16px; font-weight: bold; color: #fff; background-color: #9146ff; border-radius: 8px; text-decoration: none; transition: background-color 0.3s ease, transform 0.2s ease;">Add Audio to OBS</a>
 
 ---
 
