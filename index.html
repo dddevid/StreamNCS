@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Stream from Twitch</title>
+    <style>
+        /* Nascondi l'iframe */
+        iframe {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Iframe invisibile per caricare il canale Twitch -->
+    <iframe src="https://www.twitch.tv/nocopyrightsounds" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+    </iframe>
+
+    <script>
+        // Aggiungi l'autoplay per il video e audio del canale
+        window.onload = function() {
+            var iframe = document.querySelector("iframe");
+            var iframeContentWindow = iframe.contentWindow;
+
+            // Esegui eventuali operazioni per l'autoplay dell'audio (se disponibile)
+            iframeContentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+        };
+    </script>
+
+</body>
+</html>
