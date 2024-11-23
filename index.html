@@ -3,32 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Stream from Twitch</title>
+    <title>Twitch Audio Stream</title>
     <style>
-        /* Nascondi l'iframe */
-        iframe {
+        /* Nascondi completamente il player Twitch (senza che si veda nulla) */
+        #twitch-embed {
             display: none;
         }
     </style>
 </head>
 <body>
 
-    <!-- Iframe invisibile per caricare il canale Twitch -->
-    <iframe src="https://www.twitch.tv/nocopyrightsounds" 
-            frameborder="0" 
-            allow="autoplay; encrypted-media" 
-            allowfullscreen>
-    </iframe>
+    <!-- Placeholder per l'embed di Twitch -->
+    <div id="twitch-embed"></div>
 
-    <script>
-        // Aggiungi l'autoplay per il video e audio del canale
-        window.onload = function() {
-            var iframe = document.querySelector("iframe");
-            var iframeContentWindow = iframe.contentWindow;
+    <!-- Carica lo script dell'embed di Twitch -->
+    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 
-            // Esegui eventuali operazioni per l'autoplay dell'audio (se disponibile)
-            iframeContentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-        };
+    <!-- Crea l'oggetto Twitch.Player. Questo renderizzerà il player all'interno del div -->
+    <script type="text/javascript">
+      new Twitch.Player("twitch-embed", {
+        channel: "nocopyrightsounds",  // Canale Twitch
+        muted: false,                  // L'audio non è disabilitato
+        autoplay: true,                // Autoplay attivato per riprodurre l'audio subito
+        width: 0,                      // Imposta la larghezza del player a 0 per nasconderlo
+        height: 0,                     // Imposta l'altezza del player a 0 per nasconderlo
+      });
     </script>
 
 </body>
